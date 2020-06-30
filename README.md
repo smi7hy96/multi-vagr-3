@@ -22,7 +22,7 @@
 	- Starts up VM server (will take some time)
 	- Check it is present / running in VirtualBox Manager
 
-###TO TEST:
+### TO TEST:
 
 1) `$ cd tests`
 2) `$ rake spec`
@@ -48,4 +48,5 @@
   - Fibonacci Generator : The number at position 10 is 55
   - (Change the number 10 to any number you wish)
 
-  ### JENKINS
+
+### Jenkins
