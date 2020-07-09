@@ -31,4 +31,5 @@ sudo npm install
 cd /home/ubuntu/app
 # install pm2
 sudo npm install pm2 -g
-sudo pm2 start app.js
+sudo npm install forever -g
+sudo forever start app.js
