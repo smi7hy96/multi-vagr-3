@@ -17,13 +17,18 @@ sudo apt-get install python-software-properties
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install nodejs -y
 
-# install pm2
-sudo npm install pm2 -g
-
 sudo rm /etc/nginx/sites-available/default
-sudo cp /home/ubuntu/environment/default.conf /etc/nginx/sites-available/default
+sudo cp /home/ubuntu/environment/app/default.conf /etc/nginx/sites-available/default
 
 sudo service nginx restart
 # npm install and start
-echo 'export DB_HOST=mongodb://192.168.10.200:27017/posts' >> ~/.bashrc
+#echo 'export DB_HOST=mongodb://192.168.10.200:27017/posts' >> ~/.bashrc
+#echo 'export DB_HOST=mongodb://priv:27017/posts' >> ~/.bashrc
+
 sudo npm install
+
+
+cd /home/ubuntu/app
+# install pm2
+sudo npm install pm2 -g
+sudo pm2 start app.js
